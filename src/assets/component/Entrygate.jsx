@@ -83,7 +83,7 @@ const handleLogin= async(fromdata)=>{
       </button>
    </div>
     </Form>}
-    <h1>{login?"your account":"log first ??"}</h1>
+    <h1>{login?"successfully login":"log first ??"}</h1>
     </>
   );
 }
