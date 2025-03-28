@@ -44,6 +44,15 @@ const handleLogin= async(fromdata)=>{
       settokenId(res.data.access_token)
       if(res) dispatch(changestate());
 
+      const header = {
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }
+
+  const profliedata= await getreqToken(header);
+  console.log(profliedata)
+
       
       
  }
