@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import AppLayout from "./assets/component/layout/appLayout";
 import { Entrygate } from "./assets/component/Entrygate";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import { Pricex } from "./assets/component/layout/Pricex";
 
  const app=()=>{

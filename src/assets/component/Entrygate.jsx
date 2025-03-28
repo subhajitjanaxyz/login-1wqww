@@ -72,7 +72,7 @@ setProfiledata(profliedata)
    {login || <Form action={handleLogin} className='my-5 border w-75 mx-auto p-5 border-black bg-black text-white rounded-3'>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" name='id' placeholder="Enter email" />
+        <Form.Control type="email" required name='id' placeholder="Enter email" />
         <Form.Text className="text-muted " >
          <span className='text-white'> We'll never share your email with anyone else.</span>
         </Form.Text>
@@ -80,7 +80,7 @@ setProfiledata(profliedata)
 
       <Form.Group className="mb-3" controlId="formBa    sicPassword">
         <Form.Label>Password</Form.Label>
-        <Form.Control type="password" name='password' placeholder="Password" />
+        <Form.Control type="password" required name='password' placeholder="Password" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         <Form.Check type="checkbox" label="Check me out" />
