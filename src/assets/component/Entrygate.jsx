@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useDispatch, useSelector } from 'react-redux';
 import { changestate } from '../../app/dataSlice';
@@ -8,6 +8,8 @@ import { changestate } from '../../app/dataSlice';
 export function Entrygate() {
     const dispatch=useDispatch();
     let [tokenId,settokenId]=useState('')
+    const[profiledata,setProfiledata]=useState({});
+    console.log(profiledata)
     console.log(tokenId)
   
 const login=useSelector((state)=>state.authx);
@@ -15,14 +17,11 @@ console.log(login)
    
 
     const loginreq= (payload)=>{
-        try {
+      
             const res =  axios.post('https://api.escuelajs.co/api/v1/auth/login', payload);
       
-        return res
-        } catch (error) {
-            console.log(error.massage)
-        }
-
+          return res
+       
     }
     const getreqToken=(token)=>{
         const res= axios.get('https://api.escuelajs.co/api/v1/auth/profile', token)
@@ -40,20 +39,29 @@ const handleLogin= async(fromdata)=>{
       }
       
     
+    try {
       const res= await loginreq(payload)
       settokenId(res.data.access_token)
       if(res) dispatch(changestate());
-
-      const header = {
-        headers: {
-            Authorization: `Bearer ${token}`
-        }
+    } catch (error) {
+      console.log(error.message)
+      
     }
 
-  const profliedata= await getreqToken(header);
-  console.log(profliedata)
+try {
+  const headers = {
+    headers: {
+        Authorization: `Bearer ${tokenId}`
+    }
+}
 
-      
+const profliedata= await getreqToken(headers);
+console.log(profliedata)
+setProfiledata(profliedata)
+  
+} catch (error) {
+  console.log(  error.message)
+}
       
  }
 
