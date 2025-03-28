@@ -9,11 +9,11 @@ export function Header() {
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Navbar.Brand >Navbar</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link ><NavLink to="/">Home</NavLink></Nav.Link>
-            <Nav.Link ><NavLink to="/entry">login</NavLink></Nav.Link>
-            <Nav.Link ><NavLink to="/a">Pricing</NavLink></Nav.Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/entry">login</NavLink>
+            <NavLink to="/a">Pricing</NavLink>
           </Nav>
         </Container>
       </Navbar>

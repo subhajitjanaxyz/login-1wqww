@@ -11,7 +11,7 @@ import { Pricex } from "./assets/component/layout/Pricex";
       path:"/",
       element: <AppLayout />,
      children:  [{
-              path:"/entry",
+              path:"/login",
               element: <Entrygate />
               
             },
