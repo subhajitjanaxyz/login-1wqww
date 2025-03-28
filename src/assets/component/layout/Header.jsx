@@ -17,7 +17,7 @@ export function Header() {
             <NavLink to="/login" className="m-3">login</NavLink>
             <NavLink to="/a" className="m-3">Pricing</NavLink>
           </Nav>
-          <div className='text-white'>{login &&"YOUR PROFILE"  }</div>
+          <div className='text-white'>{login &&"YOUR PROFILE"}</div>
         </Container>
       </Navbar>
       
